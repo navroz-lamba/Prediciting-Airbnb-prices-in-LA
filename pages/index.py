@@ -16,17 +16,17 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Planning a trip to Los Angeles?!
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            How much would you want to spend on Airbnb for a night?
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            This app could help you predict the nightly rates for renting out an Airbnb, catered to your custom needs.  
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            Is it a family vacation, where your family would like to rent out a house close to Disney, or is it a couple's getaway, and you are looking for an apartment close to the beach in Santa Monica?
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Click to Predict', color='primary'), href='/predictions')
     ],
     md=4,
 )
