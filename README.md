@@ -1,4 +1,4 @@
-# irbnb prices in LA
+# Airbnb prices in LA
 
 Predicts the nightly price of Airbnb in Los Angeles depending on the location, property type, number of bedrooms, etc.
 
