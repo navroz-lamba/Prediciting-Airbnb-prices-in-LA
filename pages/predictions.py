@@ -15,31 +15,6 @@ pipeline = load('assets/pipeline4.joblib')
 print('Pipeline Loaded!')
 print(type(pipeline))
 
-
-
-# def predict(neighborhood, property_type, instant_bookable, room_type, bedrooms, bathrooms, accommodates, review_scores_value, cancellation_policy, host_is_superhost, self_check_in, free_parking_on_premises, patio_or_balcony,
-#         internet, beach_essentials, garden_or_backyard, washer, air_conditioning, heating, 
-#         laptop_friendly_workspace, kitchen, referigerator, hair_dryer, iron, indoor_fireplace,
-#         free_street_parking, microwave, hot_water, cabel_tv, breakfast, essentials, coffee_maker, dishes_and_silverware, 
-#         dishwasher, stove, oven, private_entrance, gym, pool, cleaning_fee, security_deposit, host_acceptance_rate, minimum_nights, host_response_time, host_response_rate):
-#     print('Navroz says predict function has been called')
-#     df = pd.DataFrame(
-#         columns=['neighborhood', 'property_type', 'instant_bookable', 'room_type', 'bedrooms', 'bathrooms', 'accommodates', 'review_scores_value', 'cancellation_policy', 'host_is_superhost', 'self_check_in', 'free_parking_on_premises', 'patio_or_balcony',
-#         'internet', 'beach_essentials', 'garden_or_backyard', 'washer', 'air_conditioning', 'heating', 
-#         'laptop_friendly_workspace', 'kitchen', 'referigerator', 'hair_dryer', 'iron', 'indoor_fireplace',
-#         'free_street_parking', 'microwave', 'hot_water', 'cabel_tv', 'breakfast', 'essentials', 'coffee_maker', 'dishes_and_silverware', 
-#         'dishwasher', 'stove', 'oven', 'private_entrance', 'gym','pool','cleaning_fee', 'security_deposit', 'host_acceptance_rate', 'minimum_nights', 'host_response_time', 'host_response_rate'], 
-#         data=[[neighborhood, property_type, instant_bookable, room_type, bedrooms, bathrooms, accommodates, review_scores_value, cancellation_policy, host_is_superhost, self_check_in, free_parking_on_premises, patio_or_balcony,
-#         internet, beach_essentials, garden_or_backyard, washer, air_conditioning, heating, 
-#         laptop_friendly_workspace, kitchen, referigerator, hair_dryer, iron, indoor_fireplace,
-#         free_street_parking, microwave, hot_water, cabel_tv, breakfast, essentials, coffee_maker, dishes_and_silverware, 
-#         dishwasher, stove, oven, private_entrance, gym, pool, cleaning_fee, security_deposit, host_acceptance_rate, minimum_nights, host_response_time, host_response_rate]]
-#     )
-#     y_pred = pipeline.predict(df)[0]
-#     return f'${y_pred:.0f}'
-
-# 2 column layout. 1st column width = 4/12
-# https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
     [
         dcc.Markdown('## Predictions', className='mb-5'), 
@@ -70,7 +45,7 @@ column1 = dbc.Col(
             value = 'Downtown', 
             className='mb-5', 
         ),
-        #########
+    
         dcc.Markdown('#### Property Type'), 
         dcc.Dropdown(
             id='property_type', 
@@ -356,35 +331,6 @@ layout = dbc.Row([column1, column2, column3])
     Input('review_scores_value', 'value'),
     Input('cancellation_policy', 'value'), 
     Input('host_is_superhost', 'value'),
-    # Input('self_check_in', 'value'), 
-    # Input('free_parking_on_premises', 'value'),
-    # Input('patio_or_balcony', 'value'), 
-    # Input('internet', 'value'),
-    # Input('beach_essentials', 'value'), 
-    # Input('garden_or_backyard', 'value'),
-    # Input('washer', 'value'), 
-    # Input('air_conditioning', 'value'),
-    # Input('heating', 'value'), 
-    # Input('laptop_friendly_workspace', 'value'),
-    # Input('kitchen', 'value'), 
-    # Input('referigerator', 'value'),
-    # Input('hair_dryer', 'value'), 
-    # Input('iron', 'value'),
-    # Input('indoor_fireplace', 'value'), 
-    # Input('free_street_parking', 'value'),
-    # Input('microwave', 'value'), 
-    # Input('hot_water', 'value'),
-    # Input('cabel_tv', 'value'), 
-    # Input('breakfast', 'value'),
-    # Input('essentials', 'value'), 
-    # Input('coffee_maker', 'value'),
-    # Input('dishes_and_silverware', 'value'), 
-    # Input('dishwasher', 'value'),
-    # Input('stove', 'value'), 
-    # Input('oven', 'value'),
-    # Input('private_entrance', 'value'), 
-    # Input('gym', 'value'),
-    # Input('pool', 'value'),
     Input('cleaning_fee', 'value'),
     Input('security_deposit', 'value'), 
     Input('host_acceptance_rate', 'value'),
@@ -398,5 +344,5 @@ def predict(neighborhood, property_type, instant_bookable, room_type, bedrooms, 
         columns=['neighborhood', 'property_type', 'instant_bookable', 'room_type', 'bedrooms', 'bathrooms', 'accommodates', 'review_scores_value', 'cancellation_policy', 'host_is_superhost','cleaning_fee', 'security_deposit', 'host_acceptance_rate', 'minimum_nights', 'host_response_time', 'host_response_rate'], 
         data=[[neighborhood, property_type, instant_bookable, room_type, bedrooms, bathrooms, accommodates, review_scores_value, cancellation_policy, host_is_superhost, cleaning_fee, security_deposit, host_acceptance_rate, minimum_nights, host_response_time, host_response_rate]]
     )
-    y_pred = pipeline.predict(df)[0]
-    return y_pred
+    y_pred = round(pipeline.predict(df)[0],2)
+    return f"$ {y_pred}"

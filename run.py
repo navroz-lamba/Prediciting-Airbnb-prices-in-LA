@@ -7,16 +7,14 @@ from dash.dependencies import Input, Output
 
 # Imports from this application
 from app import app, server
-from pages import index, predictions, insights, process
+from pages import index, predictions
 
 # Navbar docs: https://dash-bootstrap-components.opensource.faculty.ai/l/components/navbar
 navbar = dbc.NavbarSimple(
     brand='Airbnb in Los Angeles',
     brand_href='/', 
     children=[
-        dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Insights', href='/insights', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Process', href='/process', className='nav-link')), 
+        dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link'))
     ],
     sticky='top',
     color='dark', 
@@ -36,9 +34,9 @@ footer = dbc.Container(
             html.P(
                 [
                     html.Span('Navroz Lamba', className='mr-2'), 
-                    html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:lamba-navroz@lambda.students.com'), 
+                    html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:lamba-navroz@lambdastudents.com'), 
                     html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/navroz-lamba/Prediciting-Airbnb-prices-in-LA'), 
-                    # html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/<you>/'), 
+                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/navroz-lamba-92a77792'), 
                     html.A(html.I(className='fab fa-twitter-square mr-1'), href='https://twitter.com/Navroz21'), 
                 ], 
                 className='lead'
@@ -68,10 +66,6 @@ def display_page(pathname):
         return index.layout
     elif pathname == '/predictions':
         return predictions.layout
-    elif pathname == '/insights':
-        return insights.layout
-    elif pathname == '/process':
-        return process.layout
     else:
         return dcc.Markdown('## Page not found')
 
