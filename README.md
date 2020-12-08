@@ -3,6 +3,7 @@
 Predicts the nightly price of Airbnb in Los Angeles depending on the location, property type, number of bedrooms, etc.
 
 Libraries used:
+
 Python | VSCode | Scikit-Learn | NLTK | Plotly Dash | Heroku
 
 ## How it works!
