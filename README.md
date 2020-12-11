@@ -1,6 +1,6 @@
 # Airbnb prices in LA
 
-Predicts the nightly price of Airbnb in Los Angeles depending on the location, property type, number of bedrooms, etc.
+Predicts the nightly rates of Airbnb in Los Angeles depending on the location, property type, number of bedrooms, etc.
 
 Python | VSCode | Scikit-Learn | NLTK | Plotly Dash | Heroku
 
