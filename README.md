@@ -2,6 +2,15 @@
 
 Predicts the nightly rates of Airbnb in Los Angeles depending on the location, property type, number of bedrooms, etc.
 
+![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
+![Framework](https://img.shields.io/badge/Framework-Flask-red)
+![Frontend](https://img.shields.io/badge/Frontend-Plotly Dash-green)
+![Library](https://img.shields.io/badge/Library-pandas-yellow)
+![Library](https://img.shields.io/badge/Library-scikit-learn-purple)
+![Library](https://img.shields.io/badge/Library-NLTK-lightblue)
+![PaaS](https://img.shields.io/badge/Paas-Heroku-fcba03)
+
+
 Python | VSCode | Scikit-Learn | NLTK | Joblib | Plotly Dash | Heroku
 
 ## How it works!
