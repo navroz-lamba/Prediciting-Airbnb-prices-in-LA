@@ -10,14 +10,14 @@ Predicts the nightly rates of Airbnb in Los Angeles depending on the location, p
 ![Library](https://img.shields.io/badge/Library-NLTK-lightblue)
 ![PaaS](https://img.shields.io/badge/Paas-Heroku-fcba03)
 
-Check out for yourself: https://airbnb-la.herokuapp.com/
+## Check out for yourself:
+https://airbnb-la.herokuapp.com/
 
-Application quick demo: 
+## Quick demo: 
 
-## How it works!
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/67918990/101460122-2b5cfa00-3907-11eb-8892-3adb0edd9d50.gif)
 
-How to run the project?
+## How to run the project?
 
 • Install all the dependencies in the procfile.lock 
 
@@ -31,6 +31,6 @@ How to run the project?
 
 Source of the dataset : http://insideairbnb.com/get-the-data.html
 
-NOTE - 
+## NOTE - 
 
 • I have added the notebook if you would further like to understand the code better, or maybe look at data wrangling and EDA. 
