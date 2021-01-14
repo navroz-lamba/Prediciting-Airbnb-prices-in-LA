@@ -6,8 +6,8 @@ Predicts the nightly rates of Airbnb in Los Angeles depending on the location, p
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
 ![Frontend](https://img.shields.io/badge/Frontend-Plotly_Dash-green)
 ![Library](https://img.shields.io/badge/Library-pandas-yellow)
-![Library](https://img.shields.io/badge/Library-scikit_learn-purple)
-![Library](https://img.shields.io/badge/Library-NLTK-lightblue)
+![Library](https://img.shields.io/badge/ML_Library-scikit_learn-purple)
+![Library](https://img.shields.io/badge/NLP_Library-NLTK-lightblue)
 ![PaaS](https://img.shields.io/badge/Paas-Heroku-fcba03)
 
 ## Check out the application:
