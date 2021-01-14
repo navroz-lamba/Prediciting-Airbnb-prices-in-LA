@@ -10,8 +10,11 @@ Predicts the nightly rates of Airbnb in Los Angeles depending on the location, p
 ![Library](https://img.shields.io/badge/Library-NLTK-lightblue)
 ![PaaS](https://img.shields.io/badge/Paas-Heroku-fcba03)
 
-## Check out for yourself:
+## Check out the application:
 https://airbnb-la.herokuapp.com/
+
+## Check out the blog for an end-to-end ML project along with explanation and solutions to some of the problems I ran into:
+https://medium.com/analytics-vidhya/predicting-airbnb-prices-in-los-angeles-14758afc47e
 
 ## Quick demo: 
 
