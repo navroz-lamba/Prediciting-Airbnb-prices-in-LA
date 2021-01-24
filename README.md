@@ -12,15 +12,26 @@ Predicts the nightly rates of Airbnb in Los Angeles depending on the location, p
 
 ## Overview of the project
 
-•	Two datasets of Boeing and Airbus were merged together 
+•	Performed Data Wrangling and Exploratory Data Analysis to process 126 features in the dataset 
 
-•	Performed Data Wrangling to remove the noise from the data
+•	Dataset was found to be highly skewed and it was fixed by filtering out the outliers
 
-•	New verticals were created using feature engineering for better insights 
+•	Created new columns using feature engineering for better model performance
 
-•	Exploratory data analysis was performed using numpy, matplotlib, seaborn and pandas
+•	Used NLTK as NLP library to extract the information from amenities column 
 
-•	Selected the best visualizations to compare information, clarify meaning and put story into proper context
+•	Created a model using Random Forest Regressor as a predictor that precisely predicted the price of an Airbnb listing
+
+•	Model was hyper tuned using Randomized Search CV
+
+•	Used Mean Absolute Error as the evaluation metric considering the outliers in the dataset 
+
+•	Joblib library was used to pickle the model and to load it in Flask 
+
+•	Plotly Dash was used as the front-end 
+
+•	The web application was deployed on Heroku
+
 
 ## Check out the application:
 https://airbnb-la.herokuapp.com/
