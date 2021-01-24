@@ -10,6 +10,18 @@ Predicts the nightly rates of Airbnb in Los Angeles depending on the location, p
 ![Library](https://img.shields.io/badge/NLP_Library-NLTK-lightblue)
 ![PaaS](https://img.shields.io/badge/Paas-Heroku-fcba03)
 
+## Overview of the project
+
+•	Two datasets of Boeing and Airbus were merged together 
+
+•	Performed Data Wrangling to remove the noise from the data
+
+•	New verticals were created using feature engineering for better insights 
+
+•	Exploratory data analysis was performed using numpy, matplotlib, seaborn and pandas
+
+•	Selected the best visualizations to compare information, clarify meaning and put story into proper context
+
 ## Check out the application:
 https://airbnb-la.herokuapp.com/
 
